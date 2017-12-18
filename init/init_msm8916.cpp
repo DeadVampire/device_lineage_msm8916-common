@@ -47,6 +47,8 @@
 using android::base::GetProperty;
 using android::base::Trim;
 
+namespace android {
+namespace init {
 __attribute__ ((weak))
 void init_target_properties()
 {
@@ -89,4 +91,6 @@ void vendor_load_properties()
 {
     init_target_properties();
     init_alarm_boot_properties();
+}
+}
 }
